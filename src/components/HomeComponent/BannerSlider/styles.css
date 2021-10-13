@@ -1,0 +1,16 @@
+.banner.banner-slider {
+  margin: -15px -100px;
+}
+
+@media (max-width: 1620px) {
+  .banner.banner-slider {
+    margin: -15px -30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .banner.banner-slider {
+    margin: -15px;
+    margin-top: -30px;
+  }
+}

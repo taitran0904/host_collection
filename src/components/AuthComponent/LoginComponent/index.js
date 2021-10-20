@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { withStyles } from "@mui/styles";
 import { Button, FormControlLabel, Checkbox } from "@mui/material";
-import { FiUser, FiKey, FiEye, FiEyeOff } from "react-icons/fi";
+import { FiUser, FiKey, FiEye, FiEyeOff, FiMail } from "react-icons/fi";
 import PropTypes from "prop-types";
 import { compose, bindActionCreators } from "redux";
 import { connect } from "react-redux";
@@ -43,7 +43,7 @@ function LoginComponent(props) {
               marginBottom: 60,
             }}
           >
-            <img style={{ width: 400 }} src={Logo} alt="logo" />
+            <img style={{ width: 200 }} src={Logo} alt="logo" />
           </div>
           <div className={classes.divField}>
             <Field
@@ -52,6 +52,7 @@ function LoginComponent(props) {
               name="email"
               component={renderTextField}
               className={classes.textField}
+              icon={<FiMail size={20} />}
               value=""
               autoFocus
             />
@@ -64,6 +65,7 @@ function LoginComponent(props) {
               className={classes.textField}
               component={renderTextField}
               type={showPassword ? "text" : "password"}
+              icon={<FiKey size={20} />}
             />
             <button
               type="button"
@@ -86,6 +88,14 @@ function LoginComponent(props) {
               label="Remember me"
             />
             <Button
+              sx={{
+                backgroundColor: "#555",
+                float: "right",
+                paddingLeft: 4,
+                paddingRight: 4,
+                fontWeight: "bold",
+                fontSize: 12,
+              }}
               disabled={submitting}
               variant="contained"
               type="submit"

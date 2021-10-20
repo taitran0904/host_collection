@@ -14,6 +14,8 @@ const theme = createTheme({
     gray: "#555",
     gray2: "#999",
     gray3: "#f5f6f8",
+    gray4: "#e1e1e1",
+    black: "#000",
     error: red[500],
   },
   colors: {

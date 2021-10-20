@@ -1,8 +1,9 @@
 const styles = (theme) => ({
   welcome: {
     display: "flex",
-    padding: "2px 10px",
-    background: theme.color.color2,
+    paddingTop: 20,
+    paddingBottom: 20,
+    background: theme.color.gray4,
     alignItems: "center",
     justifyContent: "space-between",
     color: theme.color.color6,
@@ -77,6 +78,24 @@ const styles = (theme) => ({
   openBtn: {
     display: "none",
   },
+  avatar: {
+    display: "flex",
+    // alignItems: "center",
+    "& img": {
+      width: 40,
+      height: 40,
+      objectFit: "cover",
+      objectPosition: "center",
+      marginLeft: 10,
+      borderRadius: "50%",
+      [theme.breakpoints.down("xs")]: {
+        width: 40,
+        height: 40,
+        marginRight: 10,
+      },
+    },
+    "& svg": {},
+  },
   welcomeMobile: {
     position: "fixed",
     display: "none",
@@ -87,8 +106,6 @@ const styles = (theme) => ({
     height: 40,
     zIndex: 998,
     background: "white",
-    alignItems: "center",
-    justifyContent: "space-between",
     padding: "0 10px",
 
     "& .logoMobile": {
@@ -148,6 +165,8 @@ const styles = (theme) => ({
   welcomeText: {
     display: "block",
     margin: 0,
+    fontSize: 18,
+    // marginLeft: -60,
   },
 });
 

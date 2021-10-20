@@ -1,8 +1,8 @@
 const styles = (theme) => ({
   container: {
     "& img": {
-      height: 140,
-      width: 140,
+      height: 200,
+      width: 200,
       marginRight: 10,
       marginBottom: 10,
       objectFit: "cover",
@@ -46,13 +46,13 @@ const styles = (theme) => ({
     "& svg": {
       position: "absolute",
       top: "6px",
-      left: "115px",
-      backgroundColor: "#da251c",
-      height: "20px",
-      width: "20px",
+      left: "165px",
+      backgroundColor: "#fff",
+      height: "25px",
+      width: "25px",
       padding: "3px",
       borderRadius: "50%",
-      color: "#fff",
+      color: theme.color.gray1,
       opacity: 0.7,
       fontSize: 12,
       "&:hover": {

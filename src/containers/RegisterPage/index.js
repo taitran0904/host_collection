@@ -9,11 +9,6 @@ function LoginPage(props) {
   const [loginStatus, setLoginStatus] = useState(true);
   const [registerStatus, setRegisterStatus] = useState(false);
 
-  const onChangeRegister = () => {
-    setLoginStatus(true);
-    setRegisterStatus(false);
-  };
-
   const onChangeLogin = () => {
     setLoginStatus(false);
     setRegisterStatus(true);
@@ -21,13 +16,11 @@ function LoginPage(props) {
 
   return (
     <div>
-      <div className={classes.loginWrapper}>
-        <RegisterComponent
-          status={registerStatus}
-          onChangeLogin={onChangeLogin}
-          history={history}
-        />
-      </div>
+      <RegisterComponent
+        status={registerStatus}
+        onChangeLogin={onChangeLogin}
+        history={history}
+      />
     </div>
   );
 }

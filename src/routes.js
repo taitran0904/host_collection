@@ -14,17 +14,11 @@ import MemberTop from "./containers/MyPage/MemberTop";
 import HostTop from "./containers/MyPage/HostTop";
 import HostProfile from "./containers/MyPage/HostProfile";
 
-import ShopManagement from "./containers/MyPage/ShopManagement";
-import ShopCreateManager from "./containers/MyPage/ShopCreateManager";
-import ShopCreateShopItem from "./containers/MyPage/ShopCreateShopItem";
-
-import BirthdayPage from "./containers/BirthdayPage";
-import BirthdayDetailPage from "./containers/BirthdayDetailPage";
-import BirthdayCardPage from "./containers/BirthdayCardPage";
+import ListShop from "./containers/ListShop";
 
 import ActiveCodePage from "./containers/ActiveCode";
-import ActiveStatus from "./containers/ActiveStatus";
-import ResendCodePage from "./containers/ResendCode";
+import EditPage from "./containers/MyPage/EditPage";
+import ShopItem from "./components/ShopItem";
 
 export const routes = [
   {
@@ -59,24 +53,6 @@ export const routes = [
   },
   {
     id: uniqid(),
-    path: "/member/resend-code",
-    exact: false,
-    main: ({ history, match }) => (
-      <ResendCodePage history={history} match={match} />
-    ),
-    private: false,
-  },
-  {
-    id: uniqid(),
-    path: "/member/active-status",
-    exact: false,
-    main: ({ history, match }) => (
-      <ActiveStatus history={history} match={match} />
-    ),
-    private: false,
-  },
-  {
-    id: uniqid(),
     path: "/my-page",
     exact: false,
     main: ({ history }) => <MyPage history={history} />,
@@ -85,30 +61,24 @@ export const routes = [
 
   {
     id: uniqid(),
-    path: "/birthday",
+    name: "",
+    path: "/edit-profile",
     exact: true,
-    main: ({ history, match }) => (
-      <BirthdayPage history={history} match={match} />
-    ),
-    private: false,
+    main: () => <EditPage />,
   },
   {
     id: uniqid(),
-    path: "/birthday/:id",
+    name: "",
+    path: "/list-shop",
     exact: true,
-    main: ({ history, match, location }) => (
-      <BirthdayDetailPage history={history} match={match} location={location} />
-    ),
-    private: false,
+    main: () => <ListShop />,
   },
   {
     id: uniqid(),
-    path: "/birthday-card/:id",
-    exact: true,
-    main: ({ history, match, location }) => (
-      <BirthdayCardPage history={history} match={match} location={location} />
-    ),
-    private: true,
+    name: "",
+    path: "/list-item",
+    exact: false,
+    main: () => <ShopItem />,
   },
 
   {
@@ -152,35 +122,12 @@ export const myPageHostRoutes = [
   },
 ];
 
-export const myPageShopRoutes = [
+export const myListShop = [
   {
     id: uniqid(),
-    name: myPageConstants.SHOP_MANAGEMENT,
-    path: "/my-page/shop-management",
+    name: myPageConstants.PROFILE,
+    path: "/my-page/host/list",
     exact: false,
-    main: () => <ShopManagement />,
-  },
-  {
-    id: uniqid(),
-    name: myPageConstants.SHOP_MANAGEMENT,
-    path: "/my-page/create-new-manager",
-    exact: false,
-    main: ({ history }) => <ShopCreateManager history={history} />,
-  },
-  {
-    id: uniqid(),
-    name: myPageConstants.SHOP_MANAGEMENT,
-    path: "/my-page/create-new-shop",
-    exact: false,
-    main: ({ history }) => <ShopCreateShopItem history={history} />,
-  },
-  {
-    id: uniqid(),
-    name: myPageConstants.SHOP_MANAGEMENT,
-    path: "/my-page/edit-shop/:id",
-    exact: false,
-    main: ({ history, match }) => (
-      <ShopCreateShopItem history={history} match={match} />
-    ),
+    main: () => <ListShop />,
   },
 ];

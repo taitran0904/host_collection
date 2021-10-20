@@ -1,141 +1,136 @@
-const styles = theme => ({
+const styles = (theme) => ({
   fieldGroup: {
     display: "flex",
     flexWrap: "wrap",
     margin: "0 -15px",
     "& label": {
-      left: 10,
+      left: 20,
       zIndex: 2,
-      top: 6
+      top: 0,
     },
     "& .MuiInputLabel-shrink": {
-      transform: "translate(-10px, -10px)"
+      transform: "translate(-10px, -10px)",
     },
     [theme.breakpoints.down("sm")]: {
-      margin: "0 -7.5px"
-    }
+      margin: "0 -7.5px",
+    },
   },
   avatarUploader: {
+    paddingTop: 10,
     paddingBottom: 15,
     marginBottom: 15,
-    borderBottom: "1px solid #e1e1e1"
+    borderBottom: "1px solid #e1e1e1",
+  },
+  titleEdit: {
+    fontWeight: "bold",
+    fontSize: 22,
   },
   textFieldTop: {
     margin: "0 15px",
     width: "calc(100% / 5 - 30px)",
     "& > div": {
-      width: "100%"
+      width: "100%",
     },
     "& > div > div": {
       background: "white",
-      padding: "5px 10px",
-      border: "1px solid #e1e1e1",
-      borderRadius: 4,
       "&:before": {
-        content: "none"
-      }
+        content: "none",
+      },
     },
     "& input": {
-      zIndex: 6
+      zIndex: 6,
     },
     [theme.breakpoints.down("lg")]: {
-      width: "calc(100% / 3 - 30px)"
+      width: "calc(100% / 3 - 30px)",
     },
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% / 2 - 15px)",
-      margin: "0 7.5px"
+      margin: "0 7.5px",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "calc(100% - 15px)"
-    }
+      width: "calc(100% - 15px)",
+    },
   },
   selectField: {
     margin: "16px 15px 0 15px",
     width: "calc(100% / 5 - 30px)",
     "& > div": {
-      width: "100%"
+      width: "100%",
     },
     "& > div > div": {
       width: "100%",
       background: "white",
       padding: "5px 10px",
-      border: "1px solid #e1e1e1",
       borderRadius: 4,
       "&:before": {
-        content: "none"
-      }
+        content: "none",
+      },
     },
     "& select": {
       zIndex: 6,
       margin: "0 -10px",
       padding: "6px 10px 7px",
       "&:focus": {
-        background: "inherit"
-      }
+        background: "inherit",
+      },
     },
     [theme.breakpoints.down("lg")]: {
-      width: "calc(100% / 2 - 30px)"
+      width: "calc(100% / 2 - 30px)",
     },
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% / 2 - 15px)",
       margin: "0 7.5px",
-      marginTop: 20
+      marginTop: 20,
     },
     [theme.breakpoints.down("xs")]: {
-      width: "calc(100% - 15px)"
-    }
+      width: "calc(100% - 15px)",
+    },
   },
   heightField: {
     width: "calc(100% / 5 - 30px)",
     margin: "0 15px",
     "& > div": {
-      width: "100%"
+      width: "100%",
     },
     "& > div > div": {
       background: "white",
-      padding: "5px 10px",
-      border: "1px solid #e1e1e1",
-      borderRadius: 4,
       "&:before": {
-        content: "none"
-      }
+        content: "none",
+      },
     },
     "& input": {
-      zIndex: 6
+      zIndex: 6,
     },
     [theme.breakpoints.down("lg")]: {
-      width: "calc(100% / 3 - 30px)"
+      width: "calc(100% / 3 - 30px)",
     },
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% / 2 - 15px)",
-      margin: "0 7.5px"
+      margin: "0 7.5px",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "calc(100% - 15px)"
-    }
+      width: "calc(100% - 15px)",
+    },
   },
   textArea: {
     "& textarea": {
       height: "100px!important",
-      zIndex: 6
+      zIndex: 6,
     },
     "& > div > div": {
       background: "white",
-      padding: "5px 10px",
-      border: "1px solid #e1e1e1",
-      borderRadius: 4,
       "&:before": {
-        content: "none"
-      }
+        content: "none",
+      },
     },
     "& label": {
       left: 10,
       zIndex: 2,
-      top: 6
+      top: 6,
     },
     "& .MuiInputLabel-shrink": {
-      transform: "translate(-10px, -10px)"
-    }
+      transform: "translate(-10px, -10px)",
+    },
   },
   selectTags: {
     margin: "20px 0 10px 0",
@@ -143,51 +138,48 @@ const styles = theme => ({
       color: "rgba(0, 0, 0, 0.54)",
       fontSize: "1rem",
       marginBottom: 5,
-      display: "block"
-    }
+      display: "block",
+    },
   },
   contactForm: {
     display: "flex",
     flexWrap: "wrap",
     margin: "0 -15px",
-    [theme.breakpoints.down('md')]: {
-      margin: '0 -7.5px',
+    [theme.breakpoints.down("md")]: {
+      margin: "0 -7.5px",
     },
     "& label": {
       left: 10,
       zIndex: 2,
-      top: 6
+      top: 6,
     },
     "& .MuiInputLabel-shrink": {
-      transform: "translate(-10px, -10px)"
-    }
+      transform: "translate(-10px, -10px)",
+    },
   },
   textFieldBottom: {
     width: "calc(100% / 4 - 30px)",
     margin: "0 15px",
     "& > div": {
-      width: "100%"
+      width: "100%",
     },
     "& > div > div": {
       background: "white",
-      padding: "5px 10px",
-      border: "1px solid #e1e1e1",
-      borderRadius: 4,
       "&:before": {
-        content: "none"
-      }
+        content: "none",
+      },
     },
     "& input": {
-      zIndex: 6
+      zIndex: 6,
     },
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% / 3 - 15px)",
-      margin: "0 7.5px"
+      margin: "0 7.5px",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "calc(100% - 15px)"
-    }
-  }
+      width: "calc(100% - 15px)",
+    },
+  },
 });
 
 export default styles;

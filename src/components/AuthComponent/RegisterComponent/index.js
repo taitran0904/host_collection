@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import { reduxForm, Field } from "redux-form";
 import { compose, bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { FiEye, FiEyeOff } from "react-icons/fi";
+import { FiEye, FiEyeOff, FiKey, FiMail, FiUser } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 import renderTextField from "../../../commons/FormHelper/TextField";
@@ -52,7 +52,7 @@ function RegisterComponent(props) {
               marginBottom: 60,
             }}
           >
-            <img style={{ width: 400 }} src={Logo} alt="logo" />
+            <img style={{ width: 200 }} src={Logo} alt="logo" />
           </div>
           <div className={classes.divField}>
             <Field
@@ -63,6 +63,7 @@ function RegisterComponent(props) {
               className={classes.textField}
               value=""
               margin="none"
+              icon={<FiUser size={20} />}
               fullWidth
             />
           </div>
@@ -75,6 +76,7 @@ function RegisterComponent(props) {
               className={classes.textField}
               value=""
               margin="none"
+              icon={<FiMail size={20} />}
               fullWidth
             />
           </div>
@@ -87,6 +89,7 @@ function RegisterComponent(props) {
               component={renderTextField}
               type={showPassword ? "text" : "password"}
               margin="none"
+              icon={<FiKey size={20} />}
               fullWidth
             />
             <button
@@ -106,6 +109,7 @@ function RegisterComponent(props) {
               component={renderTextField}
               type={showPassword ? "text" : "password"}
               margin="none"
+              icon={<FiKey size={20} />}
               fullWidth
             />
             <button

@@ -7,16 +7,19 @@ import { compose } from "redux";
 import _ from "lodash/lang";
 
 import styles from "./styles";
-import * as titleConstants from "../../constants/ui/myPage";
-import TitlePage from "../../components/TitlePage";
 import {
   myPageMemberRoutes,
   myPageHostRoutes,
-  myPageShopRoutes,
+  // myPageShopRoutes,
 } from "../../routes";
 
 function MyPage(props) {
   const { classes } = props;
+  const [value, setValue] = React.useState("one");
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   const renderMyPageMember = (myPageMemberRoutes) => {
     let result = null;
@@ -41,24 +44,6 @@ function MyPage(props) {
 
     if (myPageHostRoutes.length > 0) {
       result = myPageHostRoutes.map((route) => {
-        return (
-          <Route
-            key={route.id}
-            path={route.path}
-            exact={route.exact}
-            component={route.main}
-          />
-        );
-      });
-    }
-    return result;
-  };
-
-  const renderMyPageShop = (myPageShopRoutes) => {
-    let result = null;
-
-    if (myPageShopRoutes.length > 0) {
-      result = myPageShopRoutes.map((route) => {
         return (
           <Route
             key={route.id}
@@ -116,7 +101,7 @@ function MyPage(props) {
             <div className={classes.myPageContent}>
               <Switch>
                 {renderMyPageMember(myPageMemberRoutes)}
-                {renderMyPageShop(myPageShopRoutes)}
+                {/* {renderMyPageShop(myPageShopRoutes)} */}
               </Switch>
             </div>
           );
@@ -127,12 +112,7 @@ function MyPage(props) {
     return result;
   };
 
-  return (
-    <div className={classes.container}>
-      <TitlePage title={titleConstants.MY_PAGE} />
-      {renderMyPageByRole()}
-    </div>
-  );
+  return <div className={classes.container}>{renderMyPageByRole()}</div>;
 }
 
 MyPage.propTypes = {

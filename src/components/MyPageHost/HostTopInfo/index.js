@@ -8,6 +8,11 @@ import { styled } from "@mui/material/styles";
 import { grey } from "@mui/material/colors";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+
 import {
   Typography,
   SwipeableDrawer,
@@ -26,6 +31,7 @@ import noAvatar from "../../../assets/images/no-avatar.png";
 import { fetchShopList } from "../../../actions/shop";
 import { fetchRevenue } from "../../../actions/pos";
 import Cookies from "js-cookie";
+import { FiChevronDown, FiChevronRight, FiChevronsDown } from "react-icons/fi";
 
 const useStyles = makeStyles(styles);
 
@@ -46,10 +52,6 @@ const Puller = styled(Box)(({ theme }) => ({
 }));
 
 function HostTopInfo(props) {
-  const toggleDrawer = (newOpen) => () => {
-    setOpen(newOpen);
-  };
-
   const { userInfo, window } = props;
 
   const classes = useStyles();
@@ -59,7 +61,6 @@ function HostTopInfo(props) {
   const [shopDataList, setShopDataList] = useState([]);
   const [userData, setUserData] = useState({});
   const [selectedOption, setSelectedOption] = useState();
-  const [open, setOpen] = useState(false);
 
   const shopId_ck = Cookies.get("shopId_hc");
 
@@ -119,25 +120,30 @@ function HostTopInfo(props) {
     const { name, value } = e.target;
     Cookies.set("shopId_hc", value, { expires: 1 });
     setSelectedOption(parseInt(value));
-    window.location.reload();
+    window?.location.reload();
   };
 
   const renderShopList = () => {
     return (
-      <List onChangeSelect={onChangeSelect} value={selectedOption}>
-        {shopDataList.map((item) => {
-          return (
-            <>
-              <ListItem key={item.id} value={item.id} disablePadding>
-                <ListItemButton component="a" href="#simple-list">
-                  <ListItemText primary={item.name} />
-                </ListItemButton>
-              </ListItem>
-              <Divider />
-            </>
-          );
-        })}
-      </List>
+      <Box sx={{ maxWidth: 170, minWidth: 170 }}>
+        <FormControl fullWidth>
+          <InputLabel sx={{ marginTop: -1 }}>ストアリスト</InputLabel>
+          <Select
+            value={selectedOption}
+            label="ストアリスト"
+            onChange={onChangeSelect}
+            size="small"
+          >
+            {shopDataList.map((item) => {
+              return (
+                <MenuItem key={item.id} value={item.id}>
+                  {item.name}
+                </MenuItem>
+              );
+            })}
+          </Select>
+        </FormControl>
+      </Box>
     );
   };
 
@@ -147,55 +153,7 @@ function HostTopInfo(props) {
         {renderAvatar()}
         <h4>{renderNickName()}</h4>
       </div>
-      <Global
-        styles={{
-          ".MuiDrawer-root > .MuiPaper-root": {
-            height: `calc(50% - ${drawerBleeding}px)`,
-            overflow: "visible",
-          },
-        }}
-      />
-      <Box sx={{ textAlign: "center", pt: 1 }}>
-        <Button sx={{ backgroundColor: "#000" }} onClick={toggleDrawer(true)}>
-          Open
-        </Button>
-      </Box>
-      <SwipeableDrawer
-        anchor="bottom"
-        open={open}
-        onClose={toggleDrawer(false)}
-        onOpen={toggleDrawer(true)}
-        swipeAreaWidth={drawerBleeding}
-        disableSwipeToOpen={false}
-        ModalProps={{
-          keepMounted: true,
-        }}
-      >
-        <StyledBox
-          sx={{
-            position: "absolute",
-            top: -drawerBleeding,
-            borderTopLeftRadius: 8,
-            borderTopRightRadius: 8,
-            visibility: "visible",
-            right: 0,
-            left: 0,
-          }}
-        >
-          {open ? <Puller /> : <div></div>}
-          <Typography sx={{ p: 4, color: "text.secondary" }}></Typography>
-        </StyledBox>
-        <StyledBox
-          sx={{
-            px: 2,
-            pb: 2,
-            height: "100%",
-            overflow: "auto",
-          }}
-        >
-          {renderShopList()}
-        </StyledBox>
-      </SwipeableDrawer>
+      {renderShopList()}
     </div>
   );
 }

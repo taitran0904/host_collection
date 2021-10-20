@@ -2,14 +2,13 @@ import React from "react";
 import { withStyles } from "@mui/styles";
 import PropTypes from "prop-types";
 import { TextField, InputAdornment } from "@mui/material";
-import { FiKey, FiMail } from "react-icons/fi";
 import styles from "./styles";
-import { width } from "@mui/system";
 
 const renderTextField = ({
   label,
   input,
   meta: { touched, invalid, error },
+  icon,
   ...custom
 }) => {
   return (
@@ -20,7 +19,7 @@ const renderTextField = ({
       InputProps={{
         startAdornment: (
           <InputAdornment position="start">
-            <FiMail size={24} color="#cccccc" fontSize={1} />
+            {icon ? icon : <div></div>}
           </InputAdornment>
         ),
       }}

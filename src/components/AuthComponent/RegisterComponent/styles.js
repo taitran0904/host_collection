@@ -78,7 +78,7 @@ const styles = (theme) => ({
   showPassword: {
     position: "absolute",
     top: 0,
-    right: 30,
+    right: 0,
     cursor: "pointer",
     border: 0,
     background: "none",

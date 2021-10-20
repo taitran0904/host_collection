@@ -56,10 +56,6 @@ function MemberTopInfo(props) {
     return result;
   };
 
-  const checkImage = (e) => {
-    console.log("img", e.target.onerror);
-  };
-
   const renderAvatar = () => {
     let result = "";
     if (!_.isEmpty(userInfo) && !_.isEmpty(userInfo.avatar)) {
@@ -75,16 +71,20 @@ function MemberTopInfo(props) {
   return (
     <div className={classes.container}>
       <div className={classes.avatarLink}>
-        <NavLink to="/my-page/member/settings">
+        <NavLink
+          style={{ textDecoration: "none" }}
+          to="/my-page/member/settings"
+        >
           <div className={classes.avatarBox}>
             <div className={classes.avatarBoxLeft}>
               {renderAvatar()}
-              <h4>{renderNickName()}</h4>
+              <text className={classes.name}>{renderNickName()}</text>
             </div>
-            <FiChevronRight />
+            <FiChevronRight size={30} />
           </div>
         </NavLink>
       </div>
+      <div className={classes.bulkhead}></div>
       <div className={classes.infoUser}>
         <div className={classes.lineInfo}>
           <BiText />
@@ -108,22 +108,8 @@ function MemberTopInfo(props) {
           </div>
         </div>
       </div>
+      <div className={classes.bulkhead}></div>
       <RevenueMonth revenue={revenue} shopList={shopList} />
-      {/* <Ranking /> */}
-      {/* <div className={classes.nominated}>
-        <TitleChild titleChild={titleConstants.SHOP_MANAGEMENT} />
-        <NavLink className={classes.goToShopManage} to="/my-page/shop-management">
-          { titleConstants.SHOP_MANAGEMENT_BUTTON }
-        </NavLink>
-      </div>
-      <div className={classes.nominated}>
-        <TitleChild titleChild={titleConstants.ABOUT_NOMINATED} />
-        { titleConstants.ABOUT_NOMINATED_CONTENT }
-      </div>
-      <div className={classes.listFavorite}>
-        <TitleChild titleChild={titleConstants.LIST_FAVORITE} />
-        { titleConstants.LIST_FAVORITE_CONTENT }
-      </div> */}
     </div>
   );
 }

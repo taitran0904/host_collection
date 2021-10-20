@@ -74,7 +74,7 @@ const styles = (theme) => ({
   showPassword: {
     position: "absolute",
     top: 0,
-    right: 30,
+    right: 0,
     cursor: "pointer",
     border: 0,
     background: "none",
@@ -87,19 +87,6 @@ const styles = (theme) => ({
     },
     "&:hover svg": {
       color: theme.color.primary,
-    },
-  },
-
-  loginBtn: {
-    background: theme.color.primary,
-    float: "right",
-  },
-  forgot: {
-    color: theme.color.color4,
-    textDecoration: "underline",
-    "&:hover": {
-      color: theme.color.primary,
-      textShadow: "0 3px 6px rgba(0, 0, 0, .5)",
     },
   },
 

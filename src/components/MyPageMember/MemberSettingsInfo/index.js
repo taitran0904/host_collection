@@ -2,7 +2,7 @@ import React from "react";
 import { withStyles } from "@mui/styles";
 import PropTypes from "prop-types";
 import { Field } from "redux-form";
-import renderTextField from "../../../commons/FormHelper/TextField";
+import renderTextFieldOutlined from "../../../commons/FormHelper/TextFieldOutlined";
 import renderAvatarUpload from "../../../commons/FormHelper/AvatarUpload";
 import TitleChild from "../../TitleChild";
 import styles from "./styles";
@@ -14,37 +14,43 @@ function MemberSettingsInfo(props) {
   return (
     <>
       <div className={classes.formGroup}>
-        <TitleChild titleChild={titleConstants.INFO_USER} />
-        <Field
-          label={titleConstants.NAME}
-          name="name"
-          component={renderTextField}
-          className={classes.textField}
-          fullWidth
-          margin="normal"
-          variant="outlined"
-        />
-        <Field
-          label={titleConstants.EMAIL}
-          name="email"
-          component={renderTextField}
-          className={classes.textField}
-          fullWidth
-          margin="normal"
-          variant="outlined"
-        />
-        <Field
-          label={titleConstants.PHONE}
-          name="phone"
-          component={renderTextField}
-          className={classes.textField}
-          fullWidth
-          margin="normal"
-          variant="outlined"
-        />
+        {/* <TitleChild titleChild={titleConstants.INFO_USER} /> */}
+        {/* <text>{titleConstants.INFO_USER}</text> */}
+        <div className={classes.textField}>
+          <text>{titleConstants.NAME}</text>
+          <Field
+            name="name"
+            component={renderTextFieldOutlined}
+            fullWidth
+            variant="outlined"
+          />
+        </div>
+
+        <div className={classes.textField}>
+          <text>{titleConstants.EMAIL}</text>
+          <Field
+            name="email"
+            component={renderTextFieldOutlined}
+            fullWidth
+            variant="outlined"
+          />
+        </div>
+        <div className={classes.textField}>
+          <text>{titleConstants.PHONE}</text>
+          <Field
+            name="phone"
+            component={renderTextFieldOutlined}
+            fullWidth
+            variant="outlined"
+          />
+          <div className={classes.bulkhead}></div>
+        </div>
       </div>
+
       <div className={classes.formGroup}>
-        <TitleChild titleChild={titleConstants.UPLOAD_AVATAR} />
+        <text className={classes.titleAvatar}>
+          {titleConstants.UPLOAD_AVATAR}
+        </text>
         <Field
           name="avatar"
           label={titleConstants.UPLOAD}
@@ -52,6 +58,7 @@ function MemberSettingsInfo(props) {
           onUploadOneImage={onUploadOneImage}
           avatarUserTemp={avatarUserTemp}
           userInfo={userInfo}
+          className={classes.avatar}
         />
       </div>
     </>

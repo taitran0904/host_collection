@@ -1,6 +1,7 @@
 import HostTopInfo from "./HostTopInfo";
 import HostTopInfoStatistical from "./HostTopInfoStatistical";
 import HostProfileEdit from "./HostProfileEdit";
+import HostProfileView from "./HostProfileView";
 import HostProfilePhotoUpload from "./HostProfilePhotoUpload";
 
 export {
@@ -8,4 +9,5 @@ export {
   HostTopInfoStatistical,
   HostProfileEdit,
   HostProfilePhotoUpload,
+  HostProfileView,
 };

@@ -2,12 +2,11 @@ import React from "react";
 import { withStyles } from "@mui/styles";
 import PropTypes from "prop-types";
 import { Field } from "redux-form";
-import renderTextField from "../../../commons/FormHelper/TextField";
+import renderTextFieldOutlined from "../../../commons/FormHelper/TextFieldOutlined";
 import renderDatePicker from "../../../commons/FormHelper/DatePicker";
 import renderSelectField from "../../../commons/FormHelper/SelectField";
 import renderAvatarUpload from "../../../commons/FormHelper/AvatarUpload";
 import styles from "./styles";
-import TitleChild from "../../TitleChild";
 import * as titleConstants from "../../../constants/ui/myPage";
 
 const bloodOptions = [
@@ -63,12 +62,11 @@ const renderZodiacOptions = (zodiacOptions) => {
 };
 
 function HostProfileEdit(props) {
-  const { classes, onChangeTags, onUploadOneImage, avatarUserTemp, userInfo } =
-    props;
+  const { classes, onUploadOneImage, avatarUserTemp, userInfo } = props;
 
   return (
     <div className={classes.editProfile}>
-      <TitleChild titleChild={titleConstants.EDIT_PROFILE} />
+      <text className={classes.titleEdit}>{titleConstants.EDIT_PROFILE}</text>
       <div className={classes.avatarUploader}>
         <Field
           name="avatar"
@@ -81,41 +79,46 @@ function HostProfileEdit(props) {
       </div>
       <div className={classes.fieldGroup}>
         <div className={classes.textFieldTop}>
+          <text>{titleConstants.FULL_NAME}</text>
           <Field
-            label={titleConstants.FULL_NAME}
+            style={{ marginTop: 0 }}
             name="nickName"
-            component={renderTextField}
+            component={renderTextFieldOutlined}
             margin="normal"
           />
         </div>
         <div className={classes.textFieldTop}>
+          <text>{titleConstants.DATE_OF_BIRTH}</text>
           <Field
-            label={titleConstants.DATE_OF_BIRTH}
+            style={{ marginTop: 0 }}
             name="dateOfBirth"
             component={renderDatePicker}
             margin="normal"
           />
         </div>
         <div className={classes.heightField}>
+          <text>{titleConstants.HEIGHT}</text>
           <Field
-            label={titleConstants.HEIGHT}
+            style={{ marginTop: 0 }}
             name="height"
-            component={renderTextField}
+            component={renderTextFieldOutlined}
             margin="normal"
             type="number"
           />
         </div>
         <div className={classes.selectField}>
+          <text>{titleConstants.BLOOD_GROUP}</text>
           <Field
-            label={titleConstants.BLOOD_GROUP}
+            style={{ marginTop: 0 }}
             name="bloodGroup"
             component={renderSelectField}
             option={renderBloodOptions(bloodOptions)}
           />
         </div>
         <div className={classes.selectField}>
+          <text>{titleConstants.ZODIAC}</text>
           <Field
-            label={titleConstants.ZODIAC}
+            style={{ marginTop: 0 }}
             name="zodiac"
             component={renderSelectField}
             option={renderZodiacOptions(zodiacOptions)}
@@ -123,10 +126,11 @@ function HostProfileEdit(props) {
         </div>
       </div>
       <div className={classes.textArea}>
+        <text>{titleConstants.OTHER_INFORMATION}</text>
         <Field
-          label={titleConstants.OTHER_INFORMATION}
+          style={{ marginTop: 0 }}
           name="otherInformation"
-          component={renderTextField}
+          component={renderTextFieldOutlined}
           multiline
           fullWidth
           margin="normal"
@@ -134,35 +138,39 @@ function HostProfileEdit(props) {
       </div>
       <div className={classes.contactForm}>
         <div className={classes.textFieldBottom}>
+          <text>{titleConstants.ADDRESS}</text>
           <Field
-            label={titleConstants.ADDRESS}
+            style={{ marginTop: 0 }}
             name="address"
-            component={renderTextField}
+            component={renderTextFieldOutlined}
             margin="normal"
           />
         </div>
         <div className={classes.textFieldBottom}>
+          <text>{titleConstants.PHONE_NUMBER}</text>
           <Field
-            label={titleConstants.PHONE_NUMBER}
+            style={{ marginTop: 0 }}
             name="phoneNumber"
-            component={renderTextField}
+            component={renderTextFieldOutlined}
             margin="normal"
           />
         </div>
         <div className={classes.textFieldBottom}>
+          <text>{titleConstants.LINE}</text>
           <Field
-            label={titleConstants.LINE}
+            style={{ marginTop: 0 }}
             name="line"
-            component={renderTextField}
+            component={renderTextFieldOutlined}
             margin="normal"
           />
         </div>
         <div className={classes.textFieldBottom}>
+          <text>{titleConstants.EMAIL}</text>
           <Field
+            style={{ marginTop: 0 }}
             disabled
-            label={titleConstants.EMAIL}
             name="email"
-            component={renderTextField}
+            component={renderTextFieldOutlined}
             margin="normal"
           />
         </div>
@@ -170,37 +178,41 @@ function HostProfileEdit(props) {
 
       <div className={classes.contactForm}>
         <div className={classes.textFieldBottom}>
+          <text>{titleConstants.INSTAGRAM}</text>
           <Field
-            label={titleConstants.INSTAGRAM}
+            style={{ marginTop: 0 }}
             name="instagram"
-            component={renderTextField}
+            component={renderTextFieldOutlined}
             fullWidth
             margin="normal"
           />
         </div>
         <div className={classes.textFieldBottom}>
+          <text>{titleConstants.YOUTUBE}</text>
           <Field
-            label={titleConstants.YOUTUBE}
+            style={{ marginTop: 0 }}
             name="youtube"
-            component={renderTextField}
+            component={renderTextFieldOutlined}
             fullWidth
             margin="normal"
           />
         </div>
         <div className={classes.textFieldBottom}>
+          <text>{titleConstants.TWITTER}</text>
           <Field
-            label={titleConstants.TWITTER}
+            style={{ marginTop: 0 }}
             name="twitter"
-            component={renderTextField}
+            component={renderTextFieldOutlined}
             fullWidth
             margin="normal"
           />
         </div>
         <div className={classes.textFieldBottom}>
+          <text>{titleConstants.FACEBOOK}</text>
           <Field
-            label={titleConstants.FACEBOOK}
+            style={{ marginTop: 0 }}
             name="lineBlog"
-            component={renderTextField}
+            component={renderTextFieldOutlined}
             fullWidth
             margin="normal"
           />

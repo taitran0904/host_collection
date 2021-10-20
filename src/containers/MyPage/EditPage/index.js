@@ -12,14 +12,13 @@ import * as userActions from "../../../actions/user";
 import * as uploadImageActions from "../../../actions/uploadImage";
 import {
   HostProfileEdit /*HostProfilePhotoUpload*/,
-  HostProfileView /*HostProfilePhotoUpload*/,
 } from "../../../components/MyPageHost";
 import validate from "./validate";
 import _ from "lodash";
 
 import Moment from "moment";
 
-function HostProfile(props) {
+function EditPage(props) {
   const { classes, handleSubmit, userInfo, avatarUserTemp } = props;
   const [hashTags, setHashTags] = useState([]);
   const [isChange, setIsChange] = useState(false);
@@ -80,7 +79,7 @@ function HostProfile(props) {
     const { uploadImageActionCreators } = props;
     const { uploadAvatarAction, uploadAvatarUserSuccess } =
       uploadImageActionCreators;
-    // uploadAvatarAction(file);
+    uploadAvatarAction(file);
     uploadAvatarUserSuccess(file);
   };
 
@@ -94,27 +93,23 @@ function HostProfile(props) {
         onSubmit={handleSubmit(onSubmitProfile)}
         onChange={onChangeReduxForm}
       >
-        {/* <HostProfileEdit
+        <HostProfileEdit
           name="avatar"
           onUploadOneImage={onUploadOneImage}
-          onChangeTags={onChangeTags}
-          avatarUserTemp={avatarUserTemp}
-          userInfo={userInfo}
-        /> */}
-        <HostProfileView
-          name="avatar"
-          onUploadOneImage={onUploadOneImage}
-          onChangeTags={onChangeTags}
           avatarUserTemp={avatarUserTemp}
           userInfo={userInfo}
         />
+        <div className={classes.buttonGroup}>
+          <button type="submit">{titleConstants.SAVE}</button>
+          <NavLink to="/my-page">{titleConstants.BACK}</NavLink>
+        </div>
       </form>
       <Prompt when={isChange} message={titleConstants.LEAVE_FORM_MESSAGE} />
     </div>
   );
 }
 
-HostProfile.propTypes = {
+EditPage.propTypes = {
   classes: PropTypes.object,
   handleSubmit: PropTypes.func,
   userInfo: PropTypes.object,
@@ -187,4 +182,4 @@ export default compose(
   withStyles(styles),
   withConnect,
   withReduxForm
-)(HostProfile);
+)(EditPage);

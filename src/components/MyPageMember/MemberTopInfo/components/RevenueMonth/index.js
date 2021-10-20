@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./styles";
 import { makeStyles } from "@mui/styles";
+import { Box, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+
 import * as myPageConstants from "../../../../../constants/ui/myPage";
 import * as generalConstants from "../../../../../constants/ui";
 import { formatMoney } from "../../../../../commons/functionHelpers";
@@ -58,24 +60,30 @@ const RevenueMonth = (props) => {
     const { name, value } = e.target;
     Cookies.set("shopId_hc", value, { expires: 1 });
     setSelectedOption(parseInt(value));
-    // window.location.reload();
   };
 
   const renderShopList = () => {
     return (
-      <select
-        className={classes.selectShop}
-        onChange={onChangeSelect}
-        value={selectedOption}
-      >
-        {shopDataList.map((item) => {
-          return (
-            <option key={item.id} value={item.id}>
-              {item.name}
-            </option>
-          );
-        })}
-      </select>
+      <Box sx={{ maxWidth: 170, minWidth: 170 }}>
+        <FormControl fullWidth>
+          <InputLabel>ストアリスト</InputLabel>
+          <Select
+            label="ストアリスト"
+            onChange={onChangeSelect}
+            value={selectedOption}
+            size="small"
+            disableUnderline
+          >
+            {shopDataList.map((item) => {
+              return (
+                <MenuItem key={item.id} value={item.id}>
+                  {item.name}
+                </MenuItem>
+              );
+            })}
+          </Select>
+        </FormControl>
+      </Box>
     );
   };
 
@@ -83,7 +91,18 @@ const RevenueMonth = (props) => {
     <div className={classes.wrapRevenue}>
       <div className={classes.titleRevenue}>
         <p>{myPageConstants.REVENUE_OF_THIS_MONTH}</p>
-        {renderShopList()}
+        <div
+          ClassName={classes.shopList}
+          style={{
+            position: "absolute",
+            dislay: "flex",
+            right: 0,
+            marginTop: -50,
+            marginRight: 20,
+          }}
+        >
+          {renderShopList()}
+        </div>
       </div>
       <div className={classes.groupRevenue}>
         <p>

@@ -16,13 +16,11 @@ function LoginPage(props) {
 
   return (
     <div className={classes.auth__page}>
-      <div className={classes.loginWrapper}>
-        <LoginComponent
-          status={loginStatus}
-          onChangeRegister={onChangeRegister}
-          history={history}
-        />
-      </div>
+      <LoginComponent
+        status={loginStatus}
+        onChangeRegister={onChangeRegister}
+        history={history}
+      />
     </div>
   );
 }

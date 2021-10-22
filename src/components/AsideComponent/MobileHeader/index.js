@@ -22,7 +22,6 @@ function MobileMenu(props) {
         mobile="mobile"
         logout={logout}
       />
-      <MainMenu onHiddenAside={hideAside} mobile="mobile" />
     </div>
   );
 }

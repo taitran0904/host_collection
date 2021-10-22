@@ -11,7 +11,7 @@ const mainMenu = [
   {
     id: uniqid(),
     name: titleContants.MY_PAGE,
-    icon: <FiUser size={20} />,
+    icon: <FiUser size={18} />,
     to: "/my-page",
     exact: false,
   },

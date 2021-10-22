@@ -30,6 +30,7 @@ import { IMAGE_BASE_URL } from "../../../constants";
 import noAvatar from "../../../assets/images/no-avatar.png";
 import { fetchShopList } from "../../../actions/shop";
 import { fetchRevenue } from "../../../actions/pos";
+import { removeImageAvatarUser, fetchUserInfo } from "../../../actions/user";
 import Cookies from "js-cookie";
 import { FiChevronDown, FiChevronRight, FiChevronsDown } from "react-icons/fi";
 
@@ -98,6 +99,11 @@ function HostTopInfo(props) {
     return result;
   };
 
+  const onConfirm = () => {
+    // dispatch(removeImageAvatarUser(userInfo.id, userInfo.avatar));
+    dispatch(fetchUserInfo());
+  };
+
   const renderAvatar = () => {
     let result = "";
     if (!_.isEmpty(userData)) {
@@ -125,7 +131,7 @@ function HostTopInfo(props) {
 
   const renderShopList = () => {
     return (
-      <Box sx={{ maxWidth: 170, minWidth: 170 }}>
+      <Box sx={{ maxWidth: 150, minWidth: 150 }}>
         <FormControl fullWidth>
           <InputLabel sx={{ marginTop: -1 }}>ストアリスト</InputLabel>
           <Select
@@ -133,6 +139,7 @@ function HostTopInfo(props) {
             label="ストアリスト"
             onChange={onChangeSelect}
             size="small"
+            disableUnderline
           >
             {shopDataList.map((item) => {
               return (
@@ -151,7 +158,7 @@ function HostTopInfo(props) {
     <div className={classes.avatarBox}>
       <div className={classes.avatarBoxLeft}>
         {renderAvatar()}
-        <h4>{renderNickName()}</h4>
+        <h4 style={{ fontSize: 18 }}>{renderNickName()}</h4>
       </div>
       {renderShopList()}
     </div>

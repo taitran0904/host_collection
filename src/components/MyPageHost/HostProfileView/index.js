@@ -145,6 +145,7 @@ function HostProfileView(props) {
         }}
         onClick={() => {
           history.push("/edit-profile");
+          // window.location.replace("/edit-profile");
         }}
       >
         <FiEdit size={24} />

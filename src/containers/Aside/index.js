@@ -13,8 +13,7 @@ import * as authActions from "../../actions/auth";
 import styles from "./styles";
 import { Welcome, MainMenu } from "../../components/AsideComponent";
 import { FiShoppingBag, FiUser } from "react-icons/fi";
-import * as titleContants from "../../constants/ui/aside";
-import getToken from "../../commons/getToken";
+import * as titleConstants from "../../constants/ui/myPage";
 
 function Aside(props) {
   useEffect(() => {
@@ -49,49 +48,30 @@ function Aside(props) {
         userInfo={userInfo}
         logout={logout}
       />
-      {/* <MainMenu hideAside={hideAside} /> */}
-      {authStatus === "2" || getToken() ? (
-        <Button
-          sx={{
-            dislay: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-            width: "100%",
-            height: 60,
-            color: "#555",
-          }}
-          className={classes.listBtn}
-          onClick={() => {
-            history.push("my-page");
-            hideAside && hideAside();
-          }}
-        >
-          <FiUser size={18} />
-          <text>{titleContants.MY_PAGE}</text>
-        </Button>
-      ) : (
-        <div></div>
-      )}
-      <div style={{ height: 0.5, backgroundColor: "#e1e1e1" }} />
+      <MainMenu />
+      <p
+        style={{
+          backgroundColor: "#f0f0f0",
+          textAlign: "center",
+          padding: 10,
+        }}
+      >
+        目次
+      </p>
       <Button
+        startIcon={<FiShoppingBag size={18} />}
         sx={{
-          dislay: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: "100%",
+          width: "70%",
           height: 60,
           color: "#555",
+          mt: -2,
         }}
-        className={classes.listBtn}
         onClick={() => {
-          history.push("/list-shop");
+          history.push("/shop-list");
           hideAside && hideAside();
         }}
       >
-        <FiShoppingBag size={18} />
-        <text>ストアリスト</text>
+        <p>{titleConstants.SHOP_LIST}</p>
       </Button>
       <div style={{ height: 0.5, backgroundColor: "#e1e1e1" }} />
     </div>

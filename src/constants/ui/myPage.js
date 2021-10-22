@@ -1,6 +1,7 @@
 import { lang } from "./index";
 
-export const GET_GALLERY_FAILED = lang === "en" ? "Get gallery failed. Please try again!" : "";
+export const GET_GALLERY_FAILED =
+  lang === "en" ? "Get gallery failed. Please try again!" : "";
 
 /** MEMBER */
 export const MY_PAGE = lang === "en" ? "MY PAGE" : "マイページ";
@@ -21,7 +22,8 @@ export const NAME = lang === "en" ? "Name" : "名前";
 export const NICK_NAME = lang === "en" ? "Nick name" : "";
 export const FIRST_NAME = lang === "en" ? "First name" : "";
 export const FAMILY_NAME = lang === "en" ? "Family name" : "";
-export const UPLOAD_AVATAR = lang === "en" ? "UPLOAD AVATAR" : "画像アップロード";
+export const UPLOAD_AVATAR =
+  lang === "en" ? "UPLOAD AVATAR" : "画像アップロード";
 export const UPDATE_BANNER = lang === "en" ? "UPDATE BANNER" : "";
 export const UPLOAD_NOW = lang === "en" ? "UPLOAD NOW" : "";
 export const PUSH_NOTIFICATION = lang === "en" ? "PUSH NOTIFICATION" : "";
@@ -32,9 +34,11 @@ export const SOUND = lang === "en" ? "Sound" : "";
 export const NOTIFICATION_LIGHT = lang === "en" ? "Notification Light" : "";
 export const SAVE = lang === "en" ? "SAVE" : "保存";
 export const BACK = lang === "en" ? "BACK" : "戻る";
-export const SHOP_MANAGEMENT_BUTTON = lang === "en" ? "GO TO SHOP MANAGEMENT PAGE" : "";
+export const SHOP_MANAGEMENT_BUTTON =
+  lang === "en" ? "GO TO SHOP MANAGEMENT PAGE" : "";
 
-export const CLICK_TO_EDIT = lang === "en" ? "Click to edit your information" : "";
+export const CLICK_TO_EDIT =
+  lang === "en" ? "Click to edit your information" : "";
 export const ABOUT_NOMINATED_CONTENT =
   lang === "en"
     ? "You can nominate up to 10 people up to 3 times a day. The number of nominations determines the nomination ranking."
@@ -43,22 +47,29 @@ export const LIST_FAVORITE_CONTENT =
   lang === "en"
     ? "You can view the latest posts from your favorite hosts and host clubs on the Favorites page"
     : "";
-export const CLICK_TO_VIEW_HOST = lang === "en" ? "Click to view  this host's detail" : "";
-export const CLICK_TO_VIEW_SHOP = lang === "en" ? "Click to view  this shop's detail" : "";
+export const CLICK_TO_VIEW_HOST =
+  lang === "en" ? "Click to view  this host's detail" : "";
+export const CLICK_TO_VIEW_SHOP =
+  lang === "en" ? "Click to view  this shop's detail" : "";
 
 export const MEMBER_SETTINGS_FORM_NAME = "MEMBER_SETTINGS_FORM_NAME";
-export const PLEASE_ENTER_NICK_NAME = lang === "en" ? "Please enter nick name" : "";
+export const PLEASE_ENTER_NICK_NAME =
+  lang === "en" ? "Please enter nick name" : "";
 export const MUST_BE_15 = lang === "en" ? "Must be 15 characters or less" : "";
-export const PLEASE_ENTER_FULL_INFORMATION = lang === "en" ? "Please enter full information!" : "";
+export const PLEASE_ENTER_FULL_INFORMATION =
+  lang === "en" ? "Please enter full information!" : "";
 
-export const MAX_SIZE = lang === "en" ? "Max file size: 5MB, Accepted type: JPG, PNG" : "";
+export const MAX_SIZE =
+  lang === "en" ? "Max file size: 5MB, Accepted type: JPG, PNG" : "";
 export const FILE_SIZE_ERROR = lang === "en" ? "file size is too big!" : "";
-export const FILE_TYPE_ERROR = lang === "en" ? " is not supported file extension!" : "";
+export const FILE_TYPE_ERROR =
+  lang === "en" ? " is not supported file extension!" : "";
 
 //* * HOST */
 export const TOP = lang === "en" ? "TOP" : "トップ";
 export const PROFILE = lang === "en" ? "PROFILE" : "プロフィール";
-export const REVENUE_OF_THIS_MONTH = lang === "en" ? "Revenue of this month" : "今月の収益";
+export const REVENUE_OF_THIS_MONTH =
+  lang === "en" ? "Revenue of this month" : "今月の収益";
 export const ACCOUNT_MANAGE = lang === "en" ? "ACCOUNT MANAGE" : "";
 export const PROMOTION = lang === "en" ? "PROMOTION" : "";
 export const SNS = lang === "en" ? "SNS" : "";
@@ -72,7 +83,8 @@ export const PEOPLE_LIKE_THIS = lang === "en" ? "People(s) like this" : "";
 export const DAILY = lang === "en" ? "Daily" : "毎日";
 export const WEEK = lang === "en" ? "Week" : "週間";
 export const MONTH = lang === "en" ? "Month" : "月間";
-export const PEOPLE_HAS_ACCESSED = lang === "en" ? "People(s) has accessed" : "";
+export const PEOPLE_HAS_ACCESSED =
+  lang === "en" ? "People(s) has accessed" : "";
 export const PEOPLE_OFFER = lang === "en" ? "People(s) offer" : "";
 export const SNS_FOLLOWERS = lang === "en" ? "SNS FOLLOWERS" : "";
 export const PEOPLE = lang === "en" ? "People(s)" : "";
@@ -85,7 +97,8 @@ export const DATE_OF_BIRTH = lang === "en" ? "Date of birth" : "生年月日";
 export const HEIGHT = lang === "en" ? "Height(cm)" : "高さ";
 export const BLOOD_GROUP = lang === "en" ? "Blood group" : "血液型";
 export const ZODIAC = lang === "en" ? "Zodiac" : "干支";
-export const OTHER_INFORMATION = lang === "en" ? "Other information" : "その他の情報";
+export const OTHER_INFORMATION =
+  lang === "en" ? "Other information" : "その他の情報";
 export const HASHTAGS = lang === "en" ? "Hashtags" : "";
 export const PHONE_NUMBER = lang === "en" ? "Phone number" : "電話番号";
 export const EMAIL = lang === "en" ? "Email" : "Email";
@@ -96,13 +109,16 @@ export const PHOTO_GALLERY = lang === "en" ? "PHOTO GALLERY" : "";
 
 export const BALANCES = lang === "en" ? "BALANCES" : "";
 export const POINTS = lang === "en" ? "Point(s)" : "";
-export const WITHDRAWAL_ACCOUNT_INFORMATION = lang === "en" ? "WITHDRAWAL ACCOUNT INFORMATION" : "";
+export const WITHDRAWAL_ACCOUNT_INFORMATION =
+  lang === "en" ? "WITHDRAWAL ACCOUNT INFORMATION" : "";
 export const BANK_NAME = lang === "en" ? "Bank name" : "";
 export const BANK_PLACEHOLDER = lang === "en" ? "Enter name of bank..." : "";
 export const ACCOUNT_NAME = lang === "en" ? "Account name" : "";
-export const ACCOUNT_NAME_PLACEHOLDER = lang === "en" ? "Enter bank account name..." : "";
+export const ACCOUNT_NAME_PLACEHOLDER =
+  lang === "en" ? "Enter bank account name..." : "";
 export const ACCOUNT_NUMBER = lang === "en" ? "Account number" : "";
-export const ACCOUNT_NUMBER_PLACEHOLDER = lang === "en" ? "Enter bank account number" : "";
+export const ACCOUNT_NUMBER_PLACEHOLDER =
+  lang === "en" ? "Enter bank account number" : "";
 export const AMOUNT_OF_MONEY = lang === "en" ? "Amount of money" : "";
 export const AMOUNT_OF_MONEY_PLACEHOLDER =
   lang === "en" ? "Enter the amount you want to exchange" : "";
@@ -110,20 +126,25 @@ export const SEND_REQUEST = lang === "en" ? "SEND REQUEST" : "";
 export const BILLING_HISTORY = lang === "en" ? "BILLING HISTORY" : "";
 export const WITHDRAWAL_HISTORY = lang === "en" ? "WITHDRAWAL HISTORY" : "";
 
-export const UPDATE_PROFILE_BANNER = lang === "en" ? "UPDATE PROFILE BANNER" : "";
+export const UPDATE_PROFILE_BANNER =
+  lang === "en" ? "UPDATE PROFILE BANNER" : "";
 export const UPDATE_PROFILE_BANNER_NOTE =
   lang === "en" ? "Them will display at Information in Homepage" : "";
 export const UPLOAD = lang === "en" ? "UPLOAD" : "アップロード";
 export const PICK_UP = lang === "en" ? "PICK UP!" : "";
 export const TOPIC = lang === "en" ? "TOPIC" : "";
 export const SNS_INFORMATION = lang === "en" ? "SNS_INFORMATION" : "";
-export const YOUTUBE = lang === "en" ? "ID Youtube Channel" : "ID Youtube Channel";
+export const YOUTUBE =
+  lang === "en" ? "ID Youtube Channel" : "ID Youtube Channel";
 export const FACEBOOK = lang === "en" ? "Link Facebook" : "Link Facebook";
 
-export const INSTAGRAM_PLACEHOLDER = lang === "en" ? "Enter your Instagram ID" : "";
-export const YOUTUBE_PLACEHOLDER = lang === "en" ? "Enter your Youtube channel ID" : "";
+export const INSTAGRAM_PLACEHOLDER =
+  lang === "en" ? "Enter your Instagram ID" : "";
+export const YOUTUBE_PLACEHOLDER =
+  lang === "en" ? "Enter your Youtube channel ID" : "";
 export const TWITTER_PLACEHOLDER = lang === "en" ? "Enter your Twitter ID" : "";
-export const FACEBOOK_PLACEHOLDER = lang === "en" ? "Enter your link facebook" : "";
+export const FACEBOOK_PLACEHOLDER =
+  lang === "en" ? "Enter your link facebook" : "";
 
 export const CURENT_AMOUNT = lang === "en" ? "CURENT AMOUNT" : "";
 export const NOMINATIONS_COUNT = lang === "en" ? "NOMINATIONS COUNT" : "";
@@ -132,9 +153,11 @@ export const ESTIMATED_SALARY_FOR_THIS_MONTH =
   lang === "en" ? "ESTIMATED SALARY FOR THIS MONTH" : "";
 export const YEN = lang === "en" ? "Yen" : "";
 
-export const SHOP_CLICK = lang === "en" ? "Click to view this shop's detail" : "";
+export const SHOP_CLICK =
+  lang === "en" ? "Click to view this shop's detail" : "";
 export const PROFILE_FORM_NAME = "PROFILE_FORM";
-export const ACCOUNT_MANAGE_FORM_NAME = lang === "en" ? "ACCOUNT_MANAGE_FORM" : "";
+export const ACCOUNT_MANAGE_FORM_NAME =
+  lang === "en" ? "ACCOUNT_MANAGE_FORM" : "";
 export const PROMOTION_FORM_NAME = lang === "en" ? "PROMOTION_FORM" : "";
 export const SNS_FORM_NAME = lang === "en" ? "SNS_FORM" : "";
 
@@ -159,15 +182,20 @@ export const LEAVE_WITHDRAWAL_MESSAGE =
   lang === "en"
     ? "The information you enter has not been sent yet, are you sure you want to leave?"
     : "";
-export const UPDATE_SUCCESS = lang === "en" ? "Update successful!" : "更新しました";
-export const UPDATE_FAILED = lang === "en" ? "Update failed. Please try again." : "";
+export const UPDATE_SUCCESS =
+  lang === "en" ? "Update successful!" : "更新しました";
+export const UPDATE_FAILED =
+  lang === "en" ? "Update failed. Please try again." : "";
 export const UPLOAD_GALLERY_FAILED =
   lang === "en" ? "Upload gallery failed. Please try again!" : "";
-export const UPLOAD_FAILED = lang === "en" ? "Upload failed, please try again!" : "";
+export const UPLOAD_FAILED =
+  lang === "en" ? "Upload failed, please try again!" : "";
 
 export const REMOVE_THIS_PHOTO = lang === "en" ? "Remove this photo" : "";
 export const ARE_YOU_SURE_DELETE_PHOTO =
-  lang === "en" ? "This action will delete this photo without saving. Are you sure?" : "";
+  lang === "en"
+    ? "This action will delete this photo without saving. Are you sure?"
+    : "";
 
 export const ARE_YOU_SURE_DELETE_THIS_FAVORITE =
   lang === "en"
@@ -187,7 +215,7 @@ export const NUMBER_OF_DONATE = lang === "en" ? "DONATED" : "";
 export const TOTAL = lang === "en" ? "TOTAL" : "";
 
 /** SHOP MANAGEMENT */
-export const SHOP_LIST = lang === "en" ? "SHOP LIST" : "";
+export const SHOP_LIST = lang === "en" ? "SHOP LIST" : "ショップリスト";
 export const CREATE_NEW_SHOP = lang === "en" ? "CREATE NEW SHOP" : "";
 export const UPDATE_SHOP = lang === "en" ? "UPDATE SHOP" : "";
 export const PENDING = lang === "en" ? "PENDING" : "";
@@ -219,8 +247,10 @@ export const SYSTEM = lang === "en" ? "SYSTEM" : "";
 export const HP = lang === "en" ? "HP" : "";
 export const SHOPS_IN_AREA = lang === "en" ? "SHOPS IN AREA" : "";
 export const VIEW_ON_GOOGLE_MAP = lang === "en" ? "VIEW ON GOOGLE MAP" : "";
-export const RANKING_OF_THIS_MONTH = lang === "en" ? "RANKING OF THIS MONTH" : "";
-export const RANKING_OF_LAST_MONTH = lang === "en" ? "RANKING OF LAST MONTH" : "";
+export const RANKING_OF_THIS_MONTH =
+  lang === "en" ? "RANKING OF THIS MONTH" : "";
+export const RANKING_OF_LAST_MONTH =
+  lang === "en" ? "RANKING OF LAST MONTH" : "";
 export const JOB_INFORMATION = lang === "en" ? "Job Information" : "";
 export const EXPERIENCE = lang === "en" ? "Experience" : "";
 export const LINE_ID = lang === "en" ? "LINE ID" : "";
@@ -236,10 +266,13 @@ export const FILTER = lang === "en" ? "FILTER" : "";
 export const CONTACT = lang === "en" ? "CONTACT" : "";
 
 // alert
-export const CREATE_NEW_MANAGER_FORM_NAME = lang === "en" ? "CREATE_NEW_MANAGER_FORM" : "";
-export const CREATE_NEW_SHOP_FORM_NAME = lang === "en" ? "CREATE_NEW_SHOP_FORM" : "";
+export const CREATE_NEW_MANAGER_FORM_NAME =
+  lang === "en" ? "CREATE_NEW_MANAGER_FORM" : "";
+export const CREATE_NEW_SHOP_FORM_NAME =
+  lang === "en" ? "CREATE_NEW_SHOP_FORM" : "";
 export const CREATE = lang === "en" ? "CREATE" : "";
-export const SHOP_NAME_VALIDATE = lang === "en" ? "Please enter name of shop!" : "";
+export const SHOP_NAME_VALIDATE =
+  lang === "en" ? "Please enter name of shop!" : "";
 
 export const UPLOAD_LICENCE_MESSAGE =
   lang === "en"
@@ -261,11 +294,16 @@ export const DELETE_SHOP_ITEM_SUCCESS_MESSAGE =
   lang === "en" ? "Delete this shop successfully!" : "";
 
 export const ARE_YOU_SURE_DELETE_SHOP =
-  lang === "en" ? "Tthis action can't undo, are you sure delete this shop ?" : "";
+  lang === "en"
+    ? "Tthis action can't undo, are you sure delete this shop ?"
+    : "";
 
 export const ACTIVE_STATUS_SHOP_SUCCESS_MESSAGE =
   lang === "en" ? "Active shop successfully!" : "";
 export const ACTIVE_STATUS_SHOP_FAILED_MESSAGE =
   lang === "en" ? "Active shop failed!" : "";
 
-export const CONFIRM_DELETE = lang === 'en' ? "Are you sure to delete this it?" : "これを削除してもよろしいですか?"
+export const CONFIRM_DELETE =
+  lang === "en"
+    ? "Are you sure to delete this it?"
+    : "これを削除してもよろしいですか?";

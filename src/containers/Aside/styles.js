@@ -33,10 +33,6 @@ const styles = (theme) => ({
   active: {
     transform: "none",
   },
-  listBtn: {
-    borderBottomColor: "#555",
-    borderBottomWidth: 1,
-  },
 });
 
 export default styles;

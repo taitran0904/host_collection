@@ -14,11 +14,11 @@ import MemberTop from "./containers/MyPage/MemberTop";
 import HostTop from "./containers/MyPage/HostTop";
 import HostProfile from "./containers/MyPage/HostProfile";
 
-import ListShop from "./containers/ListShop";
+import ShopList from "./containers/ShopList";
 
 import ActiveCodePage from "./containers/ActiveCode";
 import EditPage from "./containers/MyPage/EditPage";
-import ShopItem from "./components/ShopItem";
+import ShopListChild from "./containers/ShopListChild";
 
 export const routes = [
   {
@@ -69,16 +69,16 @@ export const routes = [
   {
     id: uniqid(),
     name: "",
-    path: "/list-shop",
+    path: "/shop-list",
     exact: true,
-    main: () => <ListShop />,
+    main: () => <ShopList />,
   },
   {
     id: uniqid(),
     name: "",
-    path: "/list-item",
+    path: "/shop-list/:id",
     exact: false,
-    main: () => <ShopItem />,
+    main: ({ match }) => <ShopListChild match={match} />,
   },
 
   {
@@ -122,12 +122,12 @@ export const myPageHostRoutes = [
   },
 ];
 
-export const myListShop = [
-  {
-    id: uniqid(),
-    name: myPageConstants.PROFILE,
-    path: "/my-page/host/list",
-    exact: false,
-    main: () => <ListShop />,
-  },
-];
+// export const myListShop = [
+//   {
+//     id: uniqid(),
+//     name: myPageConstants.PROFILE,
+//     path: "/my-page/host/list",
+//     exact: false,
+//     main: () => <ListShop />,
+//   },
+// ];

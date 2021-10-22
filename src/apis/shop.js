@@ -40,3 +40,14 @@ export const activeStatusAPI = (data) => {
   const str = `id=${id}&email=${email}&status=${status}&token=${token}`;
   return axiosService.get(`${API_ENDPOINT}/${URL_ACTIVE_STATUS}?${str}`);
 };
+
+const URL_GET_SHOP_BY_LOCATION = "api/shop-by-location";
+
+export const fetchShopByLocationAPI = (id, token) => {
+  return axiosService.get(
+    `${API_ENDPOINT}/${URL_GET_SHOP_BY_LOCATION}?location_id=${id}`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+};

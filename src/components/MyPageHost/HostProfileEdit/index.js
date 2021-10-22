@@ -85,6 +85,7 @@ function HostProfileEdit(props) {
             name="nickName"
             component={renderTextFieldOutlined}
             margin="normal"
+            userInfo={userInfo}
           />
         </div>
         <div className={classes.textFieldTop}>
@@ -94,6 +95,7 @@ function HostProfileEdit(props) {
             name="dateOfBirth"
             component={renderDatePicker}
             margin="normal"
+            userInfo={userInfo}
           />
         </div>
         <div className={classes.heightField}>
@@ -104,6 +106,7 @@ function HostProfileEdit(props) {
             component={renderTextFieldOutlined}
             margin="normal"
             type="number"
+            userInfo={userInfo}
           />
         </div>
         <div className={classes.selectField}>
@@ -113,6 +116,7 @@ function HostProfileEdit(props) {
             name="bloodGroup"
             component={renderSelectField}
             option={renderBloodOptions(bloodOptions)}
+            userInfo={userInfo}
           />
         </div>
         <div className={classes.selectField}>
@@ -122,6 +126,7 @@ function HostProfileEdit(props) {
             name="zodiac"
             component={renderSelectField}
             option={renderZodiacOptions(zodiacOptions)}
+            userInfo={userInfo}
           />
         </div>
       </div>
@@ -134,6 +139,7 @@ function HostProfileEdit(props) {
           multiline
           fullWidth
           margin="normal"
+          userInfo={userInfo}
         />
       </div>
       <div className={classes.contactForm}>
@@ -144,6 +150,7 @@ function HostProfileEdit(props) {
             name="address"
             component={renderTextFieldOutlined}
             margin="normal"
+            userInfo={userInfo}
           />
         </div>
         <div className={classes.textFieldBottom}>
@@ -153,6 +160,7 @@ function HostProfileEdit(props) {
             name="phoneNumber"
             component={renderTextFieldOutlined}
             margin="normal"
+            userInfo={userInfo}
           />
         </div>
         <div className={classes.textFieldBottom}>
@@ -162,6 +170,7 @@ function HostProfileEdit(props) {
             name="line"
             component={renderTextFieldOutlined}
             margin="normal"
+            userInfo={userInfo}
           />
         </div>
         <div className={classes.textFieldBottom}>
@@ -172,6 +181,7 @@ function HostProfileEdit(props) {
             name="email"
             component={renderTextFieldOutlined}
             margin="normal"
+            userInfo={userInfo}
           />
         </div>
       </div>
@@ -185,6 +195,7 @@ function HostProfileEdit(props) {
             component={renderTextFieldOutlined}
             fullWidth
             margin="normal"
+            userInfo={userInfo}
           />
         </div>
         <div className={classes.textFieldBottom}>
@@ -195,6 +206,7 @@ function HostProfileEdit(props) {
             component={renderTextFieldOutlined}
             fullWidth
             margin="normal"
+            userInfo={userInfo}
           />
         </div>
         <div className={classes.textFieldBottom}>
@@ -205,6 +217,7 @@ function HostProfileEdit(props) {
             component={renderTextFieldOutlined}
             fullWidth
             margin="normal"
+            userInfo={userInfo}
           />
         </div>
         <div className={classes.textFieldBottom}>
@@ -215,6 +228,7 @@ function HostProfileEdit(props) {
             component={renderTextFieldOutlined}
             fullWidth
             margin="normal"
+            userInfo={userInfo}
           />
         </div>
       </div>

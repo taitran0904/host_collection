@@ -1,6 +1,7 @@
 const styles = (theme) => ({
   wrapRevenue: {
     backgroundColor: "#ffff",
+    paddingTop: 10,
   },
 
   titleRevenue: {

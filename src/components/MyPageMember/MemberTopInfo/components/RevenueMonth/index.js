@@ -66,7 +66,7 @@ const RevenueMonth = (props) => {
     return (
       <Box sx={{ maxWidth: 170, minWidth: 170 }}>
         <FormControl fullWidth>
-          <InputLabel>ストアリスト</InputLabel>
+          <InputLabel sx={{ mt: -1 }}>ストアリスト</InputLabel>
           <Select
             label="ストアリスト"
             onChange={onChangeSelect}

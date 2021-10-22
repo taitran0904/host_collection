@@ -80,7 +80,7 @@ function MemberTopInfo(props) {
               {renderAvatar()}
               <text className={classes.name}>{renderNickName()}</text>
             </div>
-            <FiChevronRight size={30} />
+            <FiChevronRight size={30} color="#555" />
           </div>
         </NavLink>
       </div>

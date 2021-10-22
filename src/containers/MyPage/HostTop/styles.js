@@ -6,10 +6,10 @@ const styles = (theme) => ({
 
   bulkhead: {
     height: 10,
-    width: "100%",
+    width: window.innerWidth,
     backgroundColor: "#e1e1e1",
     position: "absolute",
-    marginLeft: -15,
+    left: 0,
   },
 
   snsFollowers: {

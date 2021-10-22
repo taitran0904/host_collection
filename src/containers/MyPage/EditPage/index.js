@@ -30,14 +30,8 @@ function EditPage(props) {
   }, [props]);
 
   const onSubmitProfile = (data) => {
-    const {
-      userActionCreators,
-      galleryHostTemp,
-      uploadImageActionCreators,
-      avatarUser,
-    } = props;
+    const { userActionCreators, uploadImageActionCreators, avatarUser } = props;
     const { updateUserInfo } = userActionCreators;
-    const { uploadGalleryHost } = uploadImageActionCreators;
 
     const formData = new FormData();
     formData.append("_method", "PUT");
@@ -66,20 +60,14 @@ function EditPage(props) {
     formData.append("banner", userInfo.banner);
 
     updateUserInfo(formData);
-
     setIsChange(false);
-  };
-
-  const onChangeTags = (tags) => {
-    setHashTags(tags);
-    setIsChange(true);
   };
 
   const onUploadOneImage = (file) => {
     const { uploadImageActionCreators } = props;
     const { uploadAvatarAction, uploadAvatarUserSuccess } =
       uploadImageActionCreators;
-    uploadAvatarAction(file);
+    // uploadAvatarAction(file);
     uploadAvatarUserSuccess(file);
   };
 
